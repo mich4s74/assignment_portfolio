@@ -1,0 +1,446 @@
+/* Tip, copy paste from 13c.01.01 & 13c.01.02 to get fonts and colors up and running ... */
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+:root {
+  --font-display: "Open Sans", sans-serif;
+  --font-body: "Source Sans Pro", sans-serif;
+
+  --font-size-3xl: 7.594rem;
+  --font-size-2xl: 6rem;
+  --font-size-xl: 4.063rem;
+  --font-size-l: 2.5rem;
+  --font-size-m: 2.25rem;
+  --font-size-xm: 2rem;
+  --font-size-s: 1.4rem;
+  --font-size-xs: 1.2rem;
+  --font-size-2xs: 0.667rem;
+
+  --color-primary1: #f5f5f5;
+  --color-primary2: #f5f5f5;
+  --color-secondary1: #0a0a0a;
+  --color-secondary2: #0a0a0a;
+  --color-accent1: #99ddff;
+  --color-accent2: #ff9999;
+  --color-accent3: #99ff9b;
+}
+
+html[data-theme="dark"] {
+  --color-primary1: #0a0a0a;
+  --color-primary2: #f5f5f5;
+  --color-secondary1: #3a3939;
+  --color-secondary2: #f5f5f5;
+  --color-accent3: #99ddff;
+  --color-accent2: #ff9999;
+  --color-accent1: #99ff9b;
+}
+
+/* COLOR % */
+h1,
+h2,
+h3 h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin-bottom: 1rem;
+  color: var(--color-secondary2);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+h1 {
+  color: var(--color-primary1);
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary2);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary2);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+button {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-accent1);
+  color: var(--color-secondary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-family: var(--font-display);
+}
+
+.dark_button {
+  background-color: var(--color-accent2);
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  max-width: 250px;
+  max-height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  color: var(--color-secondary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-family: var(--font-body);
+}
+
+textarea {
+  max-width: 350px;
+  max-height: 5rem;
+}
+
+body > section {
+  margin-bottom: 2rem;
+}
+
+/*** NAV ***/
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  height: 4rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-secondary1);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  grid-column: 1/3;
+  grid-row: 2/3;
+  place-self: center;
+}
+
+nav a {
+  place-self: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: var(--color-primary2);
+  font-family: var(--font-display);
+}
+
+nav button {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  place-self: center;
+}
+
+/*** HEADER ***/
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  min-height: 60vh;
+  padding: 2rem;
+  background-image: url("imgs/7.jpeg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  backdrop-filter: grayscale(50%);
+}
+
+header p {
+  color: var(--color-primary1);
+}
+
+header button {
+  box-shadow: 1px 1px 5px var(--color-secondary1);
+}
+
+.header_graphics {
+  background-image: url("imgs/1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 200px;
+  aspect-ratio: 3 / 4;
+  border: 2px solid var(--color-primary1);
+}
+
+/*** ADVANTAGES ***/
+
+#advantages {
+  padding: 2rem;
+}
+
+.advantages_cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.advantages_card {
+  border: 1px solid var(--color-secondary1);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.advantages_card_text {
+  padding: 0.5rem 0.75rem;
+}
+
+.advantages_card_graphics {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.advantages_card:nth-child(1) .advantages_card_graphics {
+  background-image: url("imgs/3.jpeg");
+}
+.advantages_card:nth-child(2) .advantages_card_graphics {
+  background-image: url("imgs/4.jpeg");
+}
+.advantages_card:nth-child(3) .advantages_card_graphics {
+  background-image: url("imgs/5.jpeg");
+}
+.advantages_card:nth-child(4) .advantages_card_graphics {
+  background-image: url("imgs/6.jpeg");
+}
+.advantages_card:nth-child(5) .advantages_card_graphics {
+  background-image: url("imgs/2.jpeg");
+}
+
+/*** PRODUCTS ***/
+
+#product {
+  background-color: var(--color-secondary2);
+  padding: 2rem 2rem;
+}
+
+#product h2,
+#product h3,
+#product p {
+  color: var(--color-primary2);
+}
+
+.product_graphics {
+  background-image: url("imgs/8.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  padding: 2rem;
+}
+
+.highlight_small_cards {
+  display: flex;
+  gap: 1rem;
+}
+
+.highlight_small_cards div {
+  border: 1px solid var(--color-secondary1);
+  padding: 1rem 0.5rem;
+  display: inline-block;
+  width: 175px;
+}
+.highlight button {
+  margin-top: 2rem;
+}
+
+/*** TEAM ***/
+
+#team {
+  padding: 2rem;
+}
+
+.team__inner__section > article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  border: 1px solid var(--color-secondary2);
+  margin-bottom: 1rem;
+  height: 400px;
+}
+
+.team_graphics {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.team__inner__section > article:first-child .team_graphics {
+  background-image: url("imgs/9.jpeg");
+}
+.team__inner__section > article:last-child .team_graphics {
+  background-image: url("imgs/10.jpeg");
+  order: 2;
+}
+
+.team_text {
+  padding: 0.5rem;
+}
+
+/*** CONTACT ***/
+
+#contact {
+  padding: 2rem;
+  background-color: var(--color-secondary2);
+}
+
+#contact h2,
+#contact p,
+#contact label {
+  color: var(--color-primary2);
+}
+
+#contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+/*** FOOTER ***/
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+}
+
+/*** MEDIA Q ***/
+@media screen and (width > 600px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (width > 684px) {
+  .advantages_cards {
+    justify-content: left;
+  }
+
+  .advantages_card {
+    max-width: 300px;
+  }
+}
+
+@media screen and (width > 768px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .header_text {
+    grid-column: 1/2;
+  }
+  .header_graphics {
+    grid-column: 2/3;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 4rem;
+  }
+
+  .product__inner__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product_graphics {
+    margin-bottom: 0;
+  }
+
+  .highlight_small_cards {
+    flex-direction: row;
+  }
+
+  .team__inner__section {
+    display: flex;
+    gap: 1rem;
+  }
+
+  footer section {
+    flex-direction: row;
+  }
+}
+
+@media screen and (width > 1000px) {
+  .header_graphics {
+    max-width: 400px;
+  }
+}
+
+#backToProject {
+  position: fixed;
+  z-index: 50;
+  border: 2px solid black;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px black;
+  top: 6rem;
+  left: 0.3rem;
+  padding: 0.2rem;
+}
+
+#backToProject a {
+  text-decoration: none;
+}
+
+#backToProject:hover {
+  cursor: pointer;
+}

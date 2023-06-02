@@ -1,0 +1,363 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+:root {
+  --font-mont: "Montserrat", sans-serif;
+  --font-ssp: "Source Sans Pro", sans-serif;
+  --color-primary1: #f5f5f5;
+  --color-primary2: #f5f5f5;
+  --color-secondary1: #0a0a0a;
+  --color-secondary2: #0a0a0a;
+  --color-accent1: #99ddff;
+  --color-accent2: #6b8aff;
+  --color-accent3: #99ff9b;
+}
+
+html[data-theme="dark"] {
+  --color-primary1: #0a0a0a;
+  --color-primary2: #f5f5f5;
+  --color-secondary1: #6b8aff;
+  --color-secondary2: #f5f5f5;
+  --color-accent3: #99ddff;
+  --color-accent2: #ff9999;
+  --color-accent1: #99ff9b;
+}
+
+/* Fonts */
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+}
+
+h1,
+h2,
+h3 h1,
+h2,
+h3 {
+  font-family: "Montserrat", serif;
+  margin-bottom: 1rem;
+  color: var(--color-secondary2);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+h1 {
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-secondary2);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary2);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UI */
+button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-accent1);
+  color: var(--color-secondary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dark_button {
+  background-color: var(--color-accent2);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  color: var(--color-secondary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* nav */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary1);
+}
+
+nav a {
+  color: var(--color-primary2);
+  text-decoration: none;
+}
+
+nav a.logo {
+  font-family: "Noto Serif Display", serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav img:hover {
+  cursor: pointer;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+nav button {
+  background-color: var(--color-accent1);
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-primary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header button {
+  margin-bottom: 3rem;
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 250px;
+  min-height: 250px;
+  background-color: var(--color-secondary1);
+  margin-bottom: 1rem;
+  padding: 3rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.header_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+.header_graphics object svg path {
+  fill: #f00;
+}
+
+/* product section */
+#product {
+  padding: 5rem 3rem;
+  background-color: var(--color-primary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#product h2 {
+  font-size: 3.052rem;
+  line-height: 3.5rem;
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#product article:first-child {
+  min-height: 40vh;
+}
+
+.product_text {
+  width: 50vw;
+  min-width: 300px;
+}
+
+#product article:first-child .product_text {
+  width: 75vw;
+  min-width: 300px;
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  padding: 1rem;
+  margin: 3rem;
+  background-color: #6b8aff;
+  border-radius: 300px;
+}
+.product_graphics object {
+  width: 100%;
+  height: 100%;
+}
+
+/* highlight sections */
+.highlight {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-secondary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.highlight div {
+  width: 80vw;
+}
+
+.highlight div h2 {
+  font-size: 5.005rem;
+  line-height: 6rem;
+  color: var(--color-primary2);
+}
+
+.highlight a {
+  color: var(--color-primary2);
+}
+
+.dark {
+  background-color: var(--color-secondary1);
+}
+
+.dark h2 {
+  color: var(--color-primary);
+}
+
+.dark a {
+  color: var(--color-primary);
+}
+
+/* contact section */
+#contact {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-secondary1);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#contact div {
+  width: 50vw;
+  min-width: 300px;
+}
+#contact div h2,
+#contact div p {
+  color: var(--color-primary2);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-primary1);
+  color: var(--color-secondary2);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--color-primary);
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+#backToProject {
+  position: fixed;
+  z-index: 50;
+  border: 2px solid black;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 5px black;
+  top: 6rem;
+  left: 0.3rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+#backToProject a {
+  text-decoration: none;
+}
+
+#backToProject p {
+  color: #0a0a0a;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.9em;
+  }
+
+  #product h2 {
+    font-size: 1.953rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .highlight div h2 {
+    font-size: 3.052rem;
+    line-height: 3.5rem;
+  }
+}
